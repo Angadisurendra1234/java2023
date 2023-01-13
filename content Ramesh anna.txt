@@ -1,0 +1,1426 @@
+About yourself :  
+
+I have around 8 yrs of exp in  java
+AS PART of my career, I worked with various java and J2EE technologie
+like spring, Hibernate and Rest Based WEb services and spring boot and micro services.
+I also worked with front end technologies like HTML,CSS,
+Java script and JQUERY and i have some exp with angular as well.
+
+I worked with various application servers and i also worked with various databases.
+
+I have exp working with UNIT test frameworks like JUNIT and MOCKITO.
+I have experience working with build scripts like MAVEN. and continuous
+ integration scripts like JENKINS.
+These are the various technologies that i worked as part of my career
+
+AS part of my current project i am working as a full stack java developer..
+My primary responsibility is to complete all development activities
+as part of every sprint.
+We follow agile methodology here. As part of every sprint
+ we have to deliver certain user stories.. 
+I am responsible for
+Completion of those user stories in given Time framework.
+and writing the unit test cases  and participate in peer reviews, sprint planning sessions
+these are the various activities i do as part of this project..
+
+
+
+I worked with  credit card fraud  appliaction.
+
+When user  swipe a credit card, those transactions will be monitored by
+third party application called falcon. In case if any fraud is identified on credir card transaction
+a case will be created in our syste,. Our application takes care of case mnagement .
+
+AS part of this application we develped several micro services to get the case details
+and to fetch user profile  and also to fetch transcations amde by that user in the past
+and also to upload some documents. There are sveeral services which are developed using spring boot.
+
+Right from the begining of the case  to closure of the case our application will be used
+
+
+
+-------
+coming to our project architecture
+
+Every request comes to API gatweay. 
+API gateway will authenticate the request and after authentication 
+API  gateway will route the request to the service  by contacting
+Eureka service discovery client.  Once the service location is identified, 
+the service will be consumed using  RestTemplate. We also used Hystrix circuit breaker pattern
+for fault tolerance.When one service interacts with other service, 
+if the second service is not responding in certain time or if the service is completely down, 
+then  circuit will be broken and we configured fall back strategy to handle these kind of failures.  
+This is high level architecture of our project.
+
+
+
+Claims Lifecycle :
+I am cuurently working on cliam lifecycle project.  
+
+Whenever a cliam is applied  in portal, our application will take care of how to validate that claim and
+how to price that claim and
+ how to settle that claim.. The entire claim life cycle
+will be taken care by our application... There are various services on the backend to validate the claim
+and price the claim. All these componnets in the cliam life cycle will intercat through messaging systems..
+We used IBM MQ to interact between various componnets
+We also used Micro servcies kind of architecture.. We have lot of services on the backend , with which these components interact to
+ achieve its functionalty..
+All these services are developed using spring boot.. This is the high level description about this project..
+
+
+
+AT & T :
+
+I am working in network outages team. Whenever there are any network outages, our system will pull that information from DB and feed it back to IVR system.
+when customer calls contact center, then IVR system will pull information from our APIs  and
+give it back to customer. we developed several APIS using spring boot. They are micro services architecture. we used spring heavily in our application. we used spring core module, Spring AOP, spring JDBC, spring MVC and  i alos have prioe exp with spring ORM and spring Data JPa  and spring security.
+
+coming to our project architecture
+Every request comes to API gatweay. API gateway will authenticate the request and after authentication API  gateway will route the request to the service  by contacting
+Eureka service discovery client.  Once the service location is identified, the service will be consumed using  RestTemplate. We alos used Hystrix circuit breaker pattern
+for fault tolerance.When one service interacts with other service, if the second service is not responding in certain time or if the service is completely down, then  circuit will be broken and we configured fall back strategy to handle these kind of failures.  This is high level architecture
+of our project.
+
+Choreogrphy vs Orchestration :
+
+In case of orchestration, all micro services will get instructions from a conductor,
+and they act accordingly. It means if the conductor is down, all micro services are down.
+One more disadvantage with orchetsration is tight coupling. Because geenrally it uses Rest
+to interact with Micro services.  so calling the service logic should be  there
+which is tightly coupled. If the service is down or if you want to remove the service
+its not easy.. Performance will also be effected  because it has to make a call to every micro service over network everytime.
+
+But in case of choreography,  the message is published to some queue. and all micro services will be listening to the queue and they act accordingly. because of this asynchronous nature,
+the performance will be improved and  also you can remove few servcies or add few services when you need..
+
+Time complexity of TreeMap is order of  N log N
+Time complexity of hashmap is Order of 1
+
+Hystrix Circuit breaker pattern:
+
+When one micro service interacts with other micro service and if the second micro service is
+not reachable or not responding with in specified time, then we configured fallback strategy
+ by using Hystrix.
+ 
+ Eureka Service discovery client :
+ 
+ When making a request to a service, the client obtains the location of a service instance by querying a Service Registry, which knows the locations of all service instances.
+ The discovery of a service can happen on client side or it can also happen on sever side through API gateway.
+ 
+ 
+ When the request is sent from a client, the request will be sent to API gateway first
+ and API gateway will authenticate the client and after that, it will lookup service discovery
+ 
+ for finding the service URL  . Services has to be registered in service discovery first.
+ 
+ SOAP :
+ 
+ 
+ 
+ REACT JS life cycle
+ componentWillMount is executed before rendering, on both the server and the client side.
+
+componentDidMount is executed after the first render only on the client side. This is where AJAX requests and DOM or state updates should occur. This method is also used for integration with other JavaScript frameworks and any functions with delayed execution such as setTimeout or setInterval. We are using it to update the state so we can trigger the other lifecycle methods.
+
+componentWillReceiveProps is invoked as soon as the props are updated before another render is called. We triggered it from setNewNumber when we updated the state.
+
+shouldComponentUpdate should return true or false value. This will determine if the component will be updated or not. This is set to true by default. If you are sure that the component doesn't need to render after state or props are updated, you can return false value.
+
+componentWillUpdate is called just before rendering.
+
+componentDidUpdate is called just after rendering.
+
+componentWillUnmount is called after the component is unmounted from the dom. We are unmounting our component in main.js.
+ 
+
+
+
+Design Patterns :
+
+As part of my experience , i worked mostly with frameworks.
+I know all the patterns that are used as aprt of frameworks
+I know patterns like
+Singleton pattren  -------
+
+(  As per this pattern, you can create only one instance of a class)
+We have to provide private constructor in the class...We should provide sttaic method in the class
+which will check if the instance is created  or not. If the instance is created,
+it will return the same instabnce, if it is not created, it will create the
+instance and return the instance.
+
+
+
+Factory pattern------
+
+Factory is a producer of obects.
+As per this pattern, based on the input that is supplied to factory method,
+it will craete the object accordingly.
+MVC Architectural pattren------
+Proxy pattern-------------
+
+Inheritance :
+
+Inheritance means inheriting the properties from parent class to child class
+Polymorphism :
+
+Polymorphism means existing in several forms.
+For example if there are multiple methods in the same class with same
+name but with different arguments and idfferent data types, then it is called method overloading.
+
+Method overloading is a  type of polymorphism.
+
+Method overriding :
+
+If you have  method in the parent class, then you can override
+ method  behaviour in the child class
+If you dont override, the method behaviour will be same in the child class as well.
+
+
+Encapsulation :
+
+we have to declare private varibales in the class and only public
+ methods in the class can access
+those variables and no one else can access those variables from outside the class
+It means both variables and methods are encapsulated together in a class
+
+
+Angular :  
+
+It maintains Client side MVC framework
+Two way data binding is possible with angular
+it is best used to develop Single page applications
+Type scripting is supported in  angular 2.. The syntax of type scripting is
+similar to java.. So as a java developer it is easty
+ for me to work with angular 2
+
+Angular 2 is a componnet based archutecture.
+
+You can create acomponnet and reuse the componnet acroos the application
+
+Componnets are building blocks of the application.
+
+I mean, every compoent will ahve selector and template
+and u can use this component in HTML by using selector.
+Whatever the templatethat you specified will be rendered
+when you use the selector in HTML
+
+By uisng HTTP Service we can call REST web services in angular.
+WE can use angular promises to process the response from
+REST service and bind the data to the componnets
+
+
+
+3 ways to comunicate between angular componnets :
+
+passing the reference of one component to another
+Communication through parent component
+Communication through Service
+
+
+@Input is a decorator to mark an input property
+and @Output is a decorator to mark an output property.
+
+we can pass data from one component to another componnet by using
+ @Input decorator and bind the data to property in a component.
+
+
+@Output decorator marks a class field as an output property and
+ supplies configuration metadata. It declares a data-bound output property,
+ which Angular automatically updates during change detection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+API Gateway   (Examples of API gateway ZUUL AMazon API gateway, NGINX)
+
+When you design and build large or complex microservice-based
+applications with multiple client apps, a good approach to consider
+can be an API Gateway. This is a service that provides
+a single-entry point for certain groups of microservices.
+We can authenticate the request and provide security to the application
+in API gateway. If there is no API gateway, if client applications directly
+interact with microservices, then in each micro service we should write
+logic for authenticating the request. But by using API gateway, it is
+an entry point into the system where all logic related to authentcation and routing
+the request to corresponding service will be determined
+
+Security Of Rest Based web services :
+
+The services has to be exposed over secured protocol . That is HTTPS protocol.
+ So that the certificates will
+be exchanged by both the client and server before communication begins.
+ SSL handshake has to be successful. Then
+the requesta nd response will be encrypted over network  by using
+ thse certificates. This is how the network layer
+security can be achieved.  We can also provide security at
+application layer by using OAUTH tokens.
+When client sends a request to service , it has to send Token
+in the request header. Then service will extract that token from
+request header and validate the token. If token is valid,
+then services can be consumed. If it is not valid, services cannot
+be consumed.
+
+
+Internal Implementation of HashMap :
+
+HashMap is a data structure which stores data in key value format.
+When we call
+map.put method and supply key and value  to store data, first it calculates hashcode of key
+and based on hashcode it will detrmine index location of array ,
+where key value
+pair needs to be stored. Because the underlying data structure of hashmap is
+array of linked lists. Each index of array contains a linked list.
+Once the index location of the array is calculated based on hashcode,
+it creates a node and place the key value pair in that node at that index.
+Let us assume that if you are storing another key value pair by calling
+map.put method again, then again it calculates hashcode of key  and for some reason
+if the hashcode of
+key is again the same as hashcode of previous key, then  it will create
+one more node at the same index and place the second key value pair in that node.
+Now that particular index contains a Linked list , which has two nodes in it.
+Now when you are trying to retrieve the data from hashMap by calling
+map.get method and supply the key  , it will calculate hashcode of key again and based
+on hashcode it will determine the index location. IN this index ,
+there are two nodes.
+It will Iterate these two nodes and compare the key in each node with the
+given key by using equals method. Which ever the keys are equal
+it will retrieve
+the value form that node and return the value.
+
+This is how it works internally
+
+
+
+
+  Challaenging problem :
+I faced below challenge in my recent task.
+There are two web applications interacting with each other.
+One web application is deployed in one server and other
+ web application is deployed in another server.
+These two servers are using two different character sets .
+One server is using ISO character set and other server
+ is using UTF 8 character set.  
+First web application is
+sending data to second application through HTTP post request.
+The second application is extracting data
+by using request.getParameter(<parameter name>).
+As they are using different character set ,
+the data that is obtained from request.getParameter has some junk characters.
+This is the issue reported.
+When i looked in to it,
+looks like it is a staright forward problem.
+But then i realised that
+we cannot change charcter set at server level
+as it may impact other applications deployed in same server.
+Then i have to look for work around.
+As the rootcause of problem is,
+when we read data through request.getParameter,
+it is automatically decoded using ISO character set  
+and as we dont have any control,
+i decided to avoid request.getParameter method and
+read the data from http body through buffered reader
+amd then used sub string functions to extract the data
+from http body and then changed it into UTF-8 character set programatically.
+It solved my problem
+
+JDK 8 features :
+
+Stream APIS
+Lambda expresions
+Default methods in interfaces
+Functional Interfaces
+Optionals
+
+Functional interface contains only one abstract method which
+ matches the signature of lambda expression
+
+
+OPtional s are used to avoid null pointer exceptions
+We can check if value is present or not
+
+Isempty will check  if the value is empty or not
+
+It will return falsewhen non null value is present
+
+
+Types Of Exceptions :
+
+Checked Exceptions(Excetion classes which does not extend RunTimeException class are called Checked Exceptions)
+Unchecked Exceptions(Exception classes which extend RunTimeException are UnChecked Exceptions)
+
+
+
+Final :
+
+If final Keyword is used  infront of a variable, then the value of the
+variable cannot be modified.
+If Final keyword is used infornt of a method,
+The method cannot be overridden
+If Final keyword is used infront of a class, it cannot be extended
+
+
+Finally Block :
+It is used along with try and catch block
+Whatever the piece of code , we write in finally block ,
+that piece of codewill be executed ,
+even if the exception occured or Even if th exception did not occur
+closing the database  connections
+streams close
+
+Finalize :
+
+Finalize method is part of Object class. As object class is
+super classof every class in java, every class will have finalize method by default
+We can override the logic of finalize method.
+Whenever garbage collector is removing the unused objects from
+heap memory, before removing those objects, it will give a final chance for those
+objects ,for cleanup activity by calling finalize method.
+That is the time when finalize method will
+be called
+
+Types of Polymorphism :
+
+Method overloading (Compile time polymorphism)
+Method Overriding(Runtime polymorphism)
+
+List :
+
+List is a Index based collection.
+It is a Ordered collection.
+It means , the data that is inserted in list can be
+retrieved in the same order of insertion.
+Duplicate objects can be allowed in List
+
+Set :
+
+Set does not allow duplicates
+It is not a ordered colection.
+
+Map :
+
+It stores data in Key value format.
+Its not a ordered collection.
+
+Linked List :
+LinkedList is a data structure which stores data in various nodes.
+Each node is linked to next node.In linked Lists , It is easy to
+Insert a node in between list  and delete a node in between List.
+Where as in arraylist, it is not easy to insert or delete data in between list
+
+ConcurrentHashMap :
+
+It is used in Multthreading scenarios to improve performnace .
+The entire map is divided into Multiple blocks. Each block has a lock
+associated with it. If multiple threads are trying to access
+map at the same time, which ever the thred acquires a lock on that
+particular block, only that thread can do  write operation on that block.
+All the other thredas can still work on other blocks in parallel.
+By this way , we are not blocked with the entire map. Only certain portion of the map
+is blocked  by a thread.
+That is how, performance will be improved in concurrent hashmap
+
+steps to create Immutable class
+
+i should not provide any setter methods
+I have provide only getter methods
+The variables should be declared as private  and final
+The methods should be declared as final methods
+The class should be declared a s final class
+
+
+
+Spring :
+
+Dependency injection :
+It is a design pattern.  Spring also implemented this pattern.
+AS per this pattern, as a developer we dont need to  write logic to
+create objects in application.
+The responsibility of creating the object can be delegated to
+spring container. Sprng container creates the beans
+and inject all the dependencies required for the bean. This is called
+dependency injection
+
+
+
+Autowiring :
+If we enable autowiring, spring container can automatically identify
+dependencies and inject those dependencies in to the bean .
+We need not specify dependencies of bean in configuraion file.
+
+Different types of autowiring :
+Autowiring by type
+Autowiring by name
+
+Different scopes of bean :
+Singleton scope
+Prototype scope
+In case of web applications, it can have
+request scope
+Session scope
+Global scope
+
+Default scope of a bean is singleton
+
+
+Spring Boot :
+
+Uisng spring boot we developed REST web services..  
+
+With minimal number of annotations, minimal number of dependencies in pom.xml,
+we can devlop the application very fastly.
+
+When you specify starter dependencies in pom.xml, All dependencies
+ required for the application,
+will be downloaded automatically
+
+
+Spring boot has got in built HTTp server,
+ where you can deploy  applications  and test your applications.
+It also has got In built in memory databse .
+ So you can store your data in that databse, even if the infrastructure
+ is not ready.
+ 
+ It also has got actuator framework using which we can collect
+ the  metrics of application and  check the
+ health of application
+ 
+ There ia a jar file provided by spring boot called  dev utils jar.
+ If you place this jar file in the classpath,
+ whatever the changes we made in application will be automatically refelected in the server
+ without restarting it.
+
+There is a very powerful feature  in spring boot called  Auto configuration.
+By default auto configuration will be enabled in spring boot.
+It means, during the bootstrapping of the  spring boot appliaction,
+it will check whatever the jar files
+present in the classpath and based on jar files it will
+understand what services are required
+for the appliaction  and it starts all those services  
+and also creates all the beans which are
+required for the application
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Spring Boot Framework has mainly four major Components.
+
+Spring Boot Starters
+Spring Boot AutoConfigurator
+Spring Boot CLI
+Spring Boot Actuator
+
+There is one more component called spring initializer along with these four components.
+To quickly develop the new spring boot projects ,
+we can use “Spring Initializr” web interface
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+starter-web
+Starter-security
+
+all dependencies requird for web application are automatically added when you specify
+like logger framework
+spring seurity framework
+jackson apis
+
+there is a spring secutiry context has to be built
+@EnableWebSecurity annotation has to be used
+when annoattion is used, spring boot
+by using SPRING ORM module
+i configured hibenate template bean
+and specified the dependencies for taht bean
+like
+sessionFactory bean
+datasoyrec bean
+
+and all dependencies required for datasoyrce
+i have some exp with spring JPA
+in Spring DAO, we have to write the sql queries .. SQL queries will not
+ be automatically generated
+But in case of Spring ORM,
+the sql queries will eb automatically generated by framework
+autowiriung y type
+autowiring by name
+
+the dependencies will be automatically injected by container
+when you specidy @Aiutowired annoattion on top pdf a variable
+Functional interfaces
+Stream APIS
+Lambda expressions
+Default methods in intreface
+Optionals
+It achieved functional programming
+earlier java supports Object oriented programming
+but now it supports functional programmng
+performance improvement
+to stream the data from colection more effectively
+by using parallel streaming
+sor
+more declarative style of programming
+rather than using loops
+and check the code in various steps
+we can use declaratibve style of programming  and in one line you
+will get the entoite logic
+again its a declarative style of programming. You can avoid
+ lot of boilerplate coding and you
+Optionals
+Default methods
+
+How to create thread :
+
+By Implementing Runnable Interface
+or by implementing callable interface
+WE can also use ExecutorSErvice to create a thread pool
+with predefined number of threads
+in pool..
+
+
+dead lock :
+
+For example if there are two threads. The first thread enters in to synchronized block by
+acquiring lock on first object .
+Second thread acquires lock on second object and enters in to another synchronized block
+If First thread wants to use second object inside synchronized block
+and if second threads wants to use first object inside  synchronized block
+
+it will never happen. Both threads are waiting for each other to
+release  locks on first object and secondobject.
+First thread is waiting for lock to be released on second object
+by secondthread. Second thread is waiting for lock to be released
+on first object by first thraed. Its a dead lock situation
+
+
+
+Race condition :
+
+When two thraeds are trying to access same object at the sam etime,
+there might be  arace condition. One thread will see values
+which it is not supposed to see. Other thread will also see
+different values which it is not suposed to see.
+Because both threads are racing for objectt and which ever the thread
+is given the chnace by opearting system, that thread will
+do modifications on object. This condition is called
+Race condition
+
+To Avoid race condition, we have to use synchronized block or
+ synchronized methods. Which ever the code, we have to protect, wehave to keep that code
+inside synchronized method or synchronized block
+
+The thread that acquires a lock on the obejct, only that thraed can access
+that method and other thread has to wait for the lock to be
+released on the object by first thraed. By this way , we are making sure that
+only one thraed access the unprotected code at a time and we can avoid race condition
+
+
+Difference between HTTP GET and HTTP POST  and HTTP PUT:
+
+HTTP GET is used to get the resource information from server.
+HTTP Post is used to create resource information on server
+HTTP PUT is used to update resource information on server
+HTTP DELETE is used to delete information on server
+
+Security Of Rest Based web services :
+
+The services has to be exposed over secured protocol .
+That is HTTPS protocol. So that the certificates will
+be exchanged by both the client and server before communication begins.
+SSL handshake has to be successful. Then
+the requesta nd response will be encrypted over network  by using thse certificates.
+This is how the network layer
+security can be achieved.  We can also provide security at
+application layer by using OAUTH tokens.
+When client sends a request to service , it has to send Token in the request header.
+ Then service will extract that token from
+request header and validate the token. If token is valid,
+then services can be consumed. If it is not valid, services cannot
+be consumed.
+
+
+SOAP VS REST
+
+SOAP is a messaging protocol. As per this protocol, the request
+has to be sent in specific format.
+It has to be sent in SOAP envelope, SOAP header and SOAP body.
+If the request is not sent in this format,
+the service will not understand request and cannot process the request.
+
+If you send request in this format, the service will  
+understand the request and process the request
+and construct the SOAP response.  It means the
+request has to be sent in xml format and
+response also to be sent in xml format. It did not
+ support any other format
+
+But in case of REST, the request can be sent in any
+format and response can also be sent in any format.
+That is why, it is called representational state transfer.
+It means the state of the resource can be transfered in any
+representation. It can be transfered in HTML represenattion,
+xml represenatation or JSON represenattion etc.
+In REST there is no additional messaging protocol like SOAP.
+It uses only HTTP network protocol.
+
+
+
+
+
+__________________________________________________________________________________________________________________________________________________________________________
+Rest Controller
+The @RestController annotation is used to define the RESTful web services. It serves JSON, XML and custom response.
+ Its syntax is shown below -
+
+@RestController
+public class ProductServiceController {
+}
+------------------------------------------------------------
+Request Mapping
+The @RequestMapping annotation is used to define the Request URI to access the REST Endpoints.
+ We can define Request method to consume and produce object. The default request method is GET.
+
+@RequestMapping(value = "/products")
+public ResponseEntity<Object> getProducts() { }
+-----------------------------------------------------------------
+Request Body
+The @RequestBody annotation is used to define the request body content type.
+
+public ResponseEntity<Object> createProduct(@RequestBody Product product) {
+}
+-----------------------------------------------------------------
+Path Variable
+The @PathVariable annotation is used to define the custom or dynamic request URI.
+The Path variable in request URI is defined as curly braces {} as shown below -
+
+public ResponseEntity<Object> updateProduct(@PathVariable("id") String id) {
+}
+----------------------------------------------------------------------
+Request Parameter
+The @RequestParam annotation is used to read the request parameters from the Request URL.
+ By default, it is a required parameter. We can also set default value for request parameters as shown here -
+
+public ResponseEntity<Object> getProduct(
+@RequestParam(value = "name", required = false, defaultValue = "honey") String name) {
+}
+
+
+Microservices:
+
+ In case of monolithic applications, the entire application is build in to one single artifact
+and we deploy that artifact in the server.
+In case if any of the module has any problem, we have to fix the problem in lower
+environment and entire application has to be deployed  in to the server by bringing down the server
+
+But in case of Micro services, Each module is deployed as a service in a individual containers.
+
+Even if one of the module has problem, The other modules are still available in other containers and
+making sure that application is highly available.
+
+It is easy to switch from technology..
+
+Foreaxample if you want to migrate
+from dotnet to Java, if you follow microservice architecture, then we can
+target service by service, instead of migrating the entire application
+at a time
+
+I would say independently deplyable and independently scalable and 
+highly available are the key characteristics of micro services
+
+
+Micro services disadvantages :
+Increases  delay due to remote calls
+It will increase effort for Writing build scripts for every micro service
+Difficult to manage transactions across various services
+Troubleshooting will be little difficult
+
+
+API Gateway   (Examples of API gateway ZUUL AMazon API gateway, NGINX)
+
+When you design and build large or complex microservice-based
+applications with multiple client apps, a good approach to consider
+can be an API Gateway. This is a service that provides
+a single-entry point for certain groups of microservices.
+We can authenticate the request and provide security to the application
+in API gateway. If there is no API gateway, if client applications directly
+interact with microservices, then in each micro service we should write
+logic for authenticating the request. But by using API gateway, it is
+an entry point into the system where all logic related to authentcation and routing
+the request to corresponding service will be determined
+
+
+Circuit breaker pattern :
+When one service interacts with other service, if the second service
+is down then we can configure fall back strategy  and break the
+circuit after some pre configured number of retry mechanism..
+WE used Hystrix to implement circuit breaker pattern..
+
+Transaction management In Micro services :
+
+WE used distributed transaction manager to manage the transcations
+across multiple services. We used two phase commit protocol, for implementing
+distributed transaction management. AS per this protocol, There are two phases
+
+Preparation phase
+commit phase
+In preparation phase, transaction manager prepares all the resources
+involved in transcation . If everything is fine and then it issues a
+commit protocol and commit the transaction
+
+I also know about saga pattern for implementing transactions acroos multiple services..
+
+In SAGA pattren we have  a orchestrator service which will read the events from messaging queue.
+Whenever one servcie completes is work it will post an event to the  queue. 
+Then orchestartor will read that event from the queueand call the corresponding service based on event. 
+In case of any failures , failure event will be posted to messaging queue. so that orchestartor service will 
+call teh corresponding services  for rollback action. This is how it works
+
+
+I also know about aggregator pattern. when we have to call multiple services to fetch details and aggregate them, 
+we can use aggregator service which will make these calls in parallel  
+and used completable future to capture teh responses and aggregated the response.
+
+Servlet life cycle :
+
+When ever the request is sent from a browser, the request is
+ handled by the web container.
+
+It handles the request by checking web.xml file  and check the
+ URL pattern and find the matching servlet.
+
+After identifying the  servlet , it will load the servlet class
+into memory. Then it will create object for the servlet.
+Uisng that object  it will call the init method and all the
+initialization logic will be executed..
+Once servlet is initialized, it is ready to serve the requests.
+ The service method in servlet will be called for servicing the requests..
+
+
+JSP Life cycle :
+
+When ever the request is sent from a browser, the request
+is handled by the web container.
+Web container will identify the  jsp file  and translates JSP into servlet.
+From here onwards it will follow servlet life cycle.
+
+
+JSP implict objects:
+
+Request object
+response object
+session object
+out is a JSP writer object
+pagecontext object
+
+
+
+Customtag :
+
+A custom tag is a user-defined Tag.
+We have to write a tag handler and override the methods called doStarttag and DoAfterBody tag ..
+The tag library descriptor contains the information about tag and tag handler
+
+
+JSTL(  JSP standarad tag library)
+
+There are so many predefines tags in JSP
+
+Core tag library
+
+
+spring MVC workflow :
+
+In any web application ,When the request is sent from a browser ,
+the request is first handled by web container .
+Then web container refers web.xml file and check the URL
+pattern and find the matching servlet.
+In case of applications that are developed with Spring MVC,
+ the matching servlet will be dispatcher servlet.
+Dispatcher servlet acts as a Front controler.
+The responsibility of Dispatcher servlet is to build
+Spring container and then identify the controller ,
+which can handle the  current request
+by using @RequestMapping annotation and  
+the responsibility of controller is to build model by calling
+, the service layer logic  
+and service layer will call the DAO layer and
+DAO layer will call databse and get the  data
+and delegate that data to Service layer.
+Then service layer will delegate it to controller
+layerController layer will build the model and add
+data to the model object and return both View name
+and Model object to Front controller
+Then Front controller will contact view tresolver
+ro resolve the view name and delegate the model to the view..
+
+This is the workflow of spring MVC
+
+
+
+
+
+
+
+Darabase :
+
+Things that you work in Database :
+I worked on creating tables and altering tables and
+writing queries to join multiple tables
+I also did PL SQL programming. I created Stored
+procedures, Stored functions..
+I created indexex to improve performance of
+SQL queries and created Triggers...These are the various things i did
+
+
+View in Database :
+
+If you dont want to expose all the columns in database ,
+then you can create aview on table and expose only those columns
+which are required by the users of that table
+
+
+
+You can alter the  view,update the view  , insert the
+records in view, delete the  records in view..
+
+If the view contains joins between multiple tables,
+you can only insert and update one table in the view, and you can't delete rows.
+
+Materialized view :
+
+In case of normal views, the results of the view are
+ not physically stored in Memory.. The query needs to be executed everytime to get
+the results. But in case of materialized view, the
+results are stored physically on the harddisk
+In other words i can say  that
+
+View is a virtual table  that is formed from one or more base tables
+Where as a Materialzed view is a physical copy of the base  table
+
+Types  of joins :
+
+
+
+
+Inner Join
+Outer Join
+Outer join is again classified into # types
+Left outer join
+Right outer join
+Full Outer Join
+
+Inner join means, when you join two tables on speciific join column,
+then you will get matching records in both tables
+
+Left outer join means when you join two tables on speciific join column,
+then you will get matching records in both tables and non matching records in left table
+
+
+Right outer join means when you join two tables on speciific join column,
+then you will get matching records in both tables and non matching records  in right table
+
+
+
+Full outer join means when you join two tables on speciific join column,
+then you will get matching records in both tables and non matching records  
+in right table  and and non matching records in left table
+
+
+Index:
+
+when there are miliions of records in databae , the execution of query  
+which has where condition , will take longer time for completion.  
+In these scenarios ,we can create index on the column that is
+used in where clause to improve the performance of query execution..
+
+performance tuning :
+
+
+We can use explain plan of a query  by  DBMS   to  find  
+what is the plan executed by DBMS to run this query.
+We can find , whether DBMS is using the index that we created or not..
+Sometimes DBMS might not like the index that is created
+and might not use it. It might do the Full table scan instead
+of using the index. I analyzed these kind of situations why DBMS is not using the index
+and improved the performance of query  by craeting the index properly
+
+Phantom Reads: Occurs when, during a transaction, new rows are added (or deleted) by another transaction to the records being read.
+
+Dirty Reads: Data is modified in current transaction by another transaction. New rows can be added by other transactions, so you end up getting different number of rows by the same query in current transaction.
+
+
+GIT FETCH : It will pull all the  changes  from remote repsoitory but
+does not copy those changes in to our local files.
+It will just display the  changes made in remote repository
+
+
+GIT PULL : It will pull the changes  from remote repository and also copy those chnages intolocal files of our current branch.
+
+Types of Index :
+
+Clustered Index  and Non Clustered Index
+
+A clustered index is a special type of index that reorders
+ the way records in the table are physically stored.
+Therefore table can have only one clustered index..
+There can be any number of non-clustered indexes on the table.
+
+Clustered indexes only sort tables.
+Therefore, they do not consume extra storage.
+Non-clustered indexes are stored in a separate place
+from the actual table claiming more storage space.
+
+Fail-Fast iterators doesn’t allow modifications of a
+collection while iterating over it.
+Fail-Safe iterators allow modifications of a collection
+while iterating over it.
+Fail Fast iterators throw ConcurrentModificationException
+if a collection is modified while iterating over it.
+Fail Safe iterators don’t throw any exceptions if a collection is modified while iterating over it.
+
+
+String buffer :
+
+In String Buffer all the methods are synchronized.
+
+String builder:
+
+In case of string builder the methods are not synchronized.  
+In case of Multi threading we should be careful while using
+String Builder object..
+
+This is the primary difference between String Buffer and String Builder.
+
+ 
+
+Serialization:
+
+Process of converting object state into bytes is called Serialization.
+When you want to send object to a remote server,
+we have to serialize the object ..
+
+If you declare variable as transient, That particular variable
+data is not serialized along with other object data..
+
+If you declare variable as volatile , the variable data is
+always accessed from main memory instead of accessing itfrom thread memory area...
+
+
+Hibernate save vs persist
+
+Hibernate persist is similar to save (with transaction) and it adds the entity object to the persistent context, so any further changes are tracked. If the object properties are changed before the transaction is committed or session is flushed, it will also be saved into database.
+
+save method returns a serializable  type
+where as persist method does not return any value
+
+save method can be used inside or outside transcation boundaries
+Persits method has to be used inside transcation boundaries only
+
+
+Hibernate merge can be used to update existing values. Merge  method  willcreate a copy from the passed entity object and return it. The returned object is part of persistent context and tracked for any changes, passed object is not tracked. This is the major difference with merge() from all other methods
+
+
+
+We can craete thread by 3 ways
+we can extend the threda class
+We can implemnet Runnable interface  and implemnet Run method
+We can implemnet callable interface  and implement call method..
+
+Call method can return a value. We can get the value returned from thread
+by using Future .get method
+Run method will not return a value.
+
+We can use FixedThreadPool or Cached Thread pool or single Threda Pool ExecutorSErvicefor implementing Thread Pool
+
+Executor framework can be used  to create thread pool
+
+In our application we will get huge amount of data from database
+and store the data in List . So we have huge number of Objects in List
+as the data  grows in DB. So we have to iterate the List and process each object
+by applying some complex business logic. This is where the performance issue reported.
+
+What i did in order to solve this problem is
+instaed of storing entire data in One list object ,
+i split the list in to multiple list objects and then fed each list to a sepearte thread
+for applying the business logic. As multiple threads are working on these multiple
+list objects, there is a increase in the performance of application.
+That is how i addressed this issue
+
+
+List is a Index based collection. It is a collection of Objects.
+Every object in list is stored at specific index.
+Map is a data structure which stores data in key value format.
+That is the primary difference between list and map
+
+
+
+
+
+
+SELECT * 
+FROM Employee Emp1
+WHERE (N-1) = ( 
+SELECT COUNT(DISTINCT(Emp2.Salary))
+FROM Employee Emp2
+WHERE Emp2.Salary > Emp1.Salary)
+
+
+
+
+
+
+
+
+HashSet s internally hashmap. Whenever we store data in hashset , it  will store that object as a key in hashmap
+and value will be dummy object.
+It uses hashcode and equals method to check if there are any duplicate objects in hashset before storing those objects in the collection 
+
+angular constructor vs Oninit
+
+Constructor and OnInit seem the same, but they are called at different phases. Angular has two phases: the bootstrapping phase, and the change detection phase.
+
+The constructor is called at the bootstrapping phase. This phase is when Angular creates the instances of services, pipes, components, and directives in our module. Angular initializes the component and resolves its dependencies and passes it to the constructor.
+
+The change detection phase happens after the bootstrapping phase when Angular finally calls the tick method
+
+At the change detection phase, 
+
+OnInit
+DoCheck and onchanges 
+
+
+are called in sequence.
+
+So, the OnInit is called after the component tree has been constructed, and the dependencies are resolved and passed to the component/directive’s instances. After being called, it is switched off.
+
+
+
+AWS :
+
+
+I worked with various servcies of AWS like
+
+Ec2 instances
+S3 buckets  
+
+AWS RDS
+
+AWS SQS(Simple queue service)
+
+AWS cloud watch
+and AWS API gateway  and i have some knowledge on AWS lambda and AWS Dynamo DB
+
+
+
+
+
+
+spring security :
+
+
+Every request will be intercepted by spring security and it performs authentication and authorization.
+
+We have to extend Websecurity configurer adapter  class and over ride   configure method.
+There are two configure methods. One configure method will accept AuthenticationManager ausing which we can perform authentication and there is one more configure method which will accept HttpSecurity and using which we can perform authorization.
+
+
+
+
+Spring AOP :
+
+It is aspect oriented programming. to decouple the cross cutting concerns from actual business logic we can use AOP.
+
+There are so many cross cutting concerns in the application like 
+
+Transaction management
+and Log mangament
+and Exception handling 
+
+We can decouple all these cross cutting concerns from actual business logic by using AOP.
+
+Spring internally uses proxy pattern for achieving AOP.
+Proxy pattern means , there will be a sub class which will extend the original class. Sub class will act as a proxy class
+and the methods will be overridden in the  subclass and you can write what ever logic you want to write in the overridden methdo and then 
+ finally call actual method in the super class by using super keyword.
+ 
+ 
+ Point cut expressions: Its  a group of join points. 
+ Join Point. The point in teh code at which the cross cutting concern logic has to be joined with the actual logic./
+
+We can use @Transcational annotation  in front of service layer method so that the transcation mnager will intercept teh call when this method is called
+and manage the transcations. If there are no exceptions it will commit the transcation and in case of exceptions it will roll back the transaction
+
+
+We can use multiple advices like before advcie and after advice and after throwing advice and after returning advice 
+and using which we can handle cross cutting concerns logic.
+
+
+
+We can use @ControllerAdvice to handle teh exceptiosn globally.
+
+We should have a class which is annotated with @Controller Advice and there should be multiple methods in the class whcih are annotated with @ExceptionHandler annotation   and specify which exception you want to handle as a dot class
+
+and you can construct the response Entity and set the status and set teh exception object as an entity and return the response entity
+
+
+
+spring data JPA:
+
+If we want to connect to databse we can use spring data JPA module. It has Jpa repository interface which has multiple methods in it.
+using which we can interact with databse,.
+We have to write one interface which is annotated with @Repostory annotation  and  extend the  JPARepository interface.
+Then spring boot will automatically provide the impleentation for that interface  and teh entire logic to connect to teh databse and get teh data from databse in the form of objects will be taken care by spring boot..
+We have to just specify entity class which is annotated with @Entity annotation and specify the  mapping informatiion  in the entity class
+We have to specify all the databse details in the application.properties file .
+
+spring ORM :
+
+If you wnat to connect to databse , we can use spring ORM.
+
+Spring ORM provides a class called HibernateTemplate using which we can communicate with  databse.
+
+We dont need to write hibernate logic to connect to teh databse. Spring already has written hibernate logic  and provided the hibernate template class.
+
+We just have to instantiate that  hibernate template class  and use teh methods in that class to interact with Databse.
+
+But we have to specify the dependecies for HibernateTemplate bean in the configuration class. 
+The dependencies for hibernate template bena is Sessionfactory bean.
+
+The dependecies for Sessiionfactory bean is Datasource bean. Datsource bean has dependecies like URL, username , password and driver class.
+
+If you configure all these dependencies, then spring container will craete all these benas and injecta ll the dependencies in to the bean during the server start up.. then we can start using these beans to interact with databse.
+
+
+
+
+
+
+Spring JDBC :
+
+If you want to connect to databse we can use spring JDBC. 
+
+In spring JDBC we have a class called JDBcTemplate. using which we can interact with databse.
+There are so many methods in that JDBCTemplate class  like query method and Update method . Using these methods we can communicate with Databse.
+
+But we have to supply the sql query in spring JDBC. we have to supply the mapper class  using which spring will identify how to map
+the results from databse to java objects. The entire JDBC logic is wriiten by spring. we dont need to create a connection to databse and we dont need to create  a statemnt and we dont need to execute the query  
+ 
+
+
+Spring Boot :
+
+Uisng spring boot we developed REST web services..  
+
+With minimal number of annotations, minimal number of dependencies in pom.xml,
+we can devlop the application very fastly.
+
+When you specify starter dependencies in pom.xml, All dependencies
+ required for the application,
+will be downloaded automatically
+
+
+Spring boot has got in built HTTp server,
+ where you can deploy  applications  and test your applications.
+It also has got In built in memory databse .
+ So you can store your data in that databse, even if the infrastructure
+ is not ready.
+ 
+ It also has got actuator framework using which we can collect
+ the  metrics of application and  check the
+ health of application
+ 
+ There ia a jar file provided by spring boot called  dev utils jar.
+ If you place this jar file in the classpath,
+ whatever the changes we made in application will be automatically refelected in the server
+ without restarting it.
+
+There is a very powerful feature  in spring boot called  Auto configuration.
+By default auto configuration will be enabled in spring boot.
+It means, during the bootstrapping of the  spring boot appliaction,
+it will check whatever the jar files
+present in the classpath and based on jar files it will
+understand what services are required
+for the appliaction  and it starts all those services  
+and also creates all the beans which are
+required for the application
+
+
+
+
+
+
+
+
+
+Spring Boot Framework has mainly four major Components.
+
+Spring Boot Starters
+Spring Boot AutoConfigurator
+Spring Boot CLI
+Spring Boot Actuator
+
+There is one more component called spring initializer along with these four components.
+To quickly develop the new spring boot projects ,
+we can use “Spring Initializr” web interface
+
+
+
+
+
+Spring :
+
+Dependency injection :
+It is a design pattern.  Spring also implemented this pattern.
+AS per this pattern, as a developer we dont need to  write logic to
+create objects in application.
+The responsibility of creating the object can be delegated to
+spring container. Sprng container creates the beans
+and inject all the dependencies required for the bean. This is called
+dependency injection
+
+
+
+Autowiring :
+If we enable autowiring, spring container can automatically identify
+dependencies and inject those dependencies in to the bean .
+We need not specify dependencies of bean in configuraion file.
+
+Different types of autowiring :
+Autowiring by type
+Autowiring by name
+
+Different scopes of bean :
+Singleton scope
+Prototype scope
+In case of web applications, it can have
+request scope
+Session scope
+Global scope
+
+
+Default scope of a bean is singleton
+
+
+spring MVC workflow :
+
+In any web application ,When the request is sent from a browser ,
+the request is first handled by web container .
+Then web container refers web.xml file and check the URL
+pattern and find the matching servlet.
+In case of applications that are developed with Spring MVC,
+ the matching servlet will be dispatcher servlet.
+Dispatcher servlet acts as a Front controler.
+The responsibility of Dispatcher servlet is to build
+Spring container and then identify the controller ,
+which can handle the  current request
+by using @RequestMapping annotation and  
+the responsibility of controller is to build model by calling
+, the service layer logic  
+and service layer will call the DAO layer and
+DAO layer will call databse and get the  data
+and delegate that data to Service layer.
+Then service layer will delegate it to controller
+layerController layer will build the model and add
+data to the model object and return both View name
+and Model object to Front controller
+Then Front controller will contact view tresolver
+ro resolve the view name and delegate the model to the view..
+
+This is the workflow of spring MVC
+
+
+Hibernate :
+
+Hibernate is  a ORM framework. Its Object Relational Mapping framework.
+
+When we want to map the database tables to java objects we can use ORM frameworks like Hibernate.
+
+We have to define teh entity classes which will will be mapped to databse tables..
+We have to define all the  databse properties in hibernate.cfg.properties  we have to use hibernate API to connect to DB. we dont need to write any JDBC logic.
+
+We can also define the  relationship between entities by using @OneTomany and @ManyToOne and @ManyToMany and @OnetoOne annoations.
+
+Hibernate also provides caching features like session level cache and Session factory level cache.
+Session level cache is a first level cache. It means when we trigger the same query again and again in the same session,
+instaed of going to teh databse everytime, it will fetch the results from session level cache. It is enabled by default. we dont need to do any configurations or any programming to enable it.
+Session factory level cache is a  second level cache. It means when we trigger  the same query again and again  across multiple sessions,
+instead of going to the databse everytime, it will fetch teh results from second level cache.
+
+By using these caching techniques, the perfromance of teh application will be improved.
+
+
+Lazy loading in hibernate :
+
+When we have multiple entities, for example Entity A and Entity Boot
+If A depends on B. in that case when we try to load the data for entity A and if we dont want to load entity B, we can configure entity B to be lazily loaded. It uses proxy pattern to achive this lazy loading. when we need entity B details, then only we can load entity B by calling Getter methods on entity A.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
